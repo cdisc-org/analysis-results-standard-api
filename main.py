@@ -11,7 +11,7 @@ ars_router = APIRouter(prefix="/mdr/ars")
 @ars_router.get("/packages/")
 def get_all_ars_packages():
     data = None
-    with open("./workfiles/examples/Sprint 10 Examples.json") as f:
+    with open("./workfiles/examples/Sprint 12 Examples.json") as f:
         data = json.load(f)
     return [data]
     
@@ -19,7 +19,7 @@ def get_all_ars_packages():
 @ars_router.get("/packages/{package_id}/reportingevents/")
 def get_all_package_reporting_events(package_id):
     data = None
-    with open("./workfiles/examples/Sprint 10 Examples.json") as f:
+    with open("./workfiles/examples/Sprint 12 Examples.json") as f:
         data = json.load(f)
     return data
     
