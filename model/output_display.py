@@ -1,9 +1,8 @@
-from typing import List, Union
-from uuid import UUID
-
+from .base_api_model import ApiBaseModel
 from .display import Display
 
-class OutputDisplay():
+
+class OutputDisplay(ApiBaseModel):
     # outputDisplayId: Union[UUID, None] = None
     order: int
     display: Display

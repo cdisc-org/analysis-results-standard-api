@@ -1,6 +1,9 @@
 from typing import List, Union, Optional
 from enum import Enum
 
+from .base_api_model import ApiBaseModel
+
+
 class Comparator(Enum):
     EQ = "EQ"
     NE = "NE"
@@ -11,7 +14,7 @@ class Comparator(Enum):
     IN = "IN"
     NOTIN = "NOTIN"
 
-class Condition():
+class Condition(ApiBaseModel):
     dataset: Optional[str] = None
     variable: Optional[str] = None
     comparator: Optional[Union[str, "Comparator"]] = None

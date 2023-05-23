@@ -1,9 +1,11 @@
 from typing import List, Union, Optional
 from uuid import UUID
 
+from .base_api_model import ApiBaseModel
 from .group import Group
 
-class GroupingFactor():
+
+class GroupingFactor(ApiBaseModel):
     """
     A factor used to subdivide either the subject population or data records in an analysis dataset for analysis.
     """

@@ -1,7 +1,10 @@
 from typing import List, Union
 from uuid import UUID
 
-class Analysis():
+from .base_api_model import ApiBaseModel
+
+
+class Analysis(ApiBaseModel):
     analysisId: Union[UUID, None] = None
     version: str
     categoryIds: List = []

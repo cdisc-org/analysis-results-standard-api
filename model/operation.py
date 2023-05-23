@@ -1,7 +1,10 @@
 from typing import List, Union
 from uuid import UUID
 
-class Operation():
+from .base_api_model import ApiBaseModel
+
+
+class Operation(ApiBaseModel):
     operationId: Union[UUID, None] = None
     name: str
     label: str

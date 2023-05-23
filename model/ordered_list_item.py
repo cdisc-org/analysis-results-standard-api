@@ -1,10 +1,11 @@
 from typing import Union, Optional
 from uuid import UUID
 
+from .base_api_model import ApiBaseModel
 from .nested_list import NestedList
 
 
-class OrderedListItem():
+class OrderedListItem(ApiBaseModel):
     name: str = None
     level: int = None
     order: int = None

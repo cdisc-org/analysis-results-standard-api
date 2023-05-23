@@ -1,7 +1,10 @@
 from typing import List, Union, Optional
 from uuid import UUID
 
-class Display():
+from .base_api_model import ApiBaseModel
+
+
+class Display(ApiBaseModel):
     displayid: Union[UUID, None] = None
     name: str = None
     version: Optional[int] = None
