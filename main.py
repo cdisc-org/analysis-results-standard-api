@@ -26,7 +26,7 @@ def get_all_package_reporting_events(package_id):
 
 @ars_router.get("/reportingevents/{reportingevent_id}/")
 def get_reporting_event(reportingevent_id):
-    pass
+    
     
 
 @ars_router.get("/reportingevents/{reportingevent_id}/methods/")

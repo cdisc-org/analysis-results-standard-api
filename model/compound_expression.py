@@ -8,3 +8,6 @@ from .where_clause import WhereClause
 class CompoundExpression(ApiBaseModel):
     logicalOperator: Union[str, LogicalOperator] = None
     whereClauses: List[Union[dict, WhereClause]] = []
+
+
+WhereClause.update_forward_refs(CompoundExpression=CompoundExpression)

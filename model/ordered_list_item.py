@@ -12,3 +12,6 @@ class OrderedListItem(ApiBaseModel):
     sublist: Optional[Union[dict, NestedList]] = None
     analysisId: Optional[str] = None
     outputId: Optional[str] = None
+
+
+NestedList.update_forward_refs(OrderedListItem=OrderedListItem)

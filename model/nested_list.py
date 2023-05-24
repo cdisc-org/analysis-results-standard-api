@@ -1,7 +1,8 @@
-from typing import List, Union
+from typing import List, Union, TYPE_CHECKING
 
 from .base_api_model import ApiBaseModel
-from .ordered_list_item import OrderedListItem
+if TYPE_CHECKING:
+    from .ordered_list_item import OrderedListItem
 
 
 class NestedList(ApiBaseModel):
