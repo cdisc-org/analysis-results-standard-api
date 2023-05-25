@@ -17,8 +17,9 @@ class ApiBaseModel(BaseModel):
     instance = raw_json
     # print(instance)
     x = json.loads(schema)
+    print(x)
     for key, definition in x["properties"].items():
-      print(f"key = {key}, definition = {definition}")
+      # print(f"key = {key}, definition = {definition}")
       if "anyOf" in definition:
         any_of = definition["anyOf"]
         for any_of_item in any_of:
