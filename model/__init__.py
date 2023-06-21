@@ -5,18 +5,17 @@ from model.analysis_method import AnalysisMethod
 from model.analysis_set import AnalysisSet
 from model.analysis import Analysis
 from model.ars_enums import LogicalOperator
-from model.compound_expression import CompoundExpression
+from model.where_clause_compound_expression import WhereClauseCompoundExpression
 from model.compound_group_expression import CompoundGroupExpression
 from model.compound_set_expression import CompoundSetExpression
 from model.compound_subset_expression import CompoundSubsetExpression
-from model.condition import Condition
 from model.data_group import DataGroup
 from model.data_grouping_factor import DataGroupingFactor
 from model.data_subset import DataSubset
-from model.display_sections import DisplaySection
+from model.display_section import DisplaySection
 from model.display_subsection import DisplaySubSection
 from model.display import Display
-from model.file import File
+from model.output_file import OutputFile
 from model.group import Group
 from model.grouping_factor import GroupingFactor
 from model.method import Method
@@ -33,3 +32,4 @@ from model.reporting_event import ReportingEvent
 from model.result_group import ResultGroup
 from model.subject_grouping_factor import SubjectGroupingFactor
 from model.where_clause import WhereClause
+from model.where_clause_condition import WhereClauseCondition

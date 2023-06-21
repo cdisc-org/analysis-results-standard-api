@@ -5,9 +5,9 @@ from .base_api_model import ApiBaseModel
 from .where_clause import WhereClause
 
 
-class CompoundExpression(ApiBaseModel):
+class WhereClauseCompoundExpression(ApiBaseModel):
     logicalOperator: Union[str, LogicalOperator] = None
     whereClauses: List[Union[dict, WhereClause]] = []
 
 
-WhereClause.update_forward_refs(CompoundExpression=CompoundExpression)
+WhereClause.update_forward_refs(CompoundExpression=WhereClauseCompoundExpression)

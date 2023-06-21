@@ -8,5 +8,5 @@ class SubjectGroupingFactor(GroupingFactor):
     """
     A factor used to subdivide the subject population for comparative analysis (e.g., treatment, sex, race, age).
     """
-    subjectGroupingFactorId: Union[UUID, str] = None
+    id: Union[UUID, str] = None
     

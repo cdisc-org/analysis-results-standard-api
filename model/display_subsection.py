@@ -1,10 +1,9 @@
-from typing import List, Union, Optional
+from typing import Union
 from uuid import UUID
 
 from .base_api_model import ApiBaseModel
 
 
 class DisplaySubSection(ApiBaseModel):
-    displaySectionId: Union[UUID, None] = None
-    order: int
+    id: Union[UUID, None] = None
     text: str

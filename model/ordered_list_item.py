@@ -6,6 +6,9 @@ from .nested_list import NestedList
 
 
 class OrderedListItem(ApiBaseModel):
+    """
+    An item (analysis, output or sub-list) ordered relative to other items within a list or sub-list.
+    """
     name: str = None
     level: int = None
     order: int = None

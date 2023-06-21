@@ -6,5 +6,8 @@ if TYPE_CHECKING:
 
 
 class NestedList(ApiBaseModel):
+    """
+    A list of items (analyses or outputs) that may be organized within sub-lists.
+    """
     listItems: List[Union[dict, "OrderedListItem"]] = []
 

@@ -10,7 +10,10 @@ class OperationRole(Enum):
     DENOMINATOR = "DENOMINATOR"
 
 class ReferencedOperationRelationship(ApiBaseModel):
-    referencedOperationRelationshipId: Union[UUID, None] = None
+    """
+    A reference to an statistical operation whose results is used in the calculation of the result for this operation.
+    """
+    id: Union[UUID, None] = None
     referencedOperationRole: Union[str, "OperationRole"] = None
     operationId: str
     analysisId: Optional[str] = None

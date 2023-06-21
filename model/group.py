@@ -1,11 +1,11 @@
 from typing import List, Union, Optional
 from uuid import UUID
 
-from .base_api_model import ApiBaseModel
 from .compound_group_expression import CompoundGroupExpression
+from .where_clause import WhereClause
 
 
-class Group(ApiBaseModel):
+class Group(WhereClause):
     """
     A subdivision of the subject population or analysis dataset record set based on a defined factor.
     """

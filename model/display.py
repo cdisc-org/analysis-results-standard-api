@@ -2,7 +2,7 @@ from typing import List, Union, Optional
 from uuid import UUID
 
 from .base_api_model import ApiBaseModel
-from .display_sections import DisplaySection
+from .display_section import DisplaySection
 
 
 class Display(ApiBaseModel):

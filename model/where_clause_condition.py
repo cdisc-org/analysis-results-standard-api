@@ -14,7 +14,7 @@ class Comparator(Enum):
     IN = "IN"
     NOTIN = "NOTIN"
 
-class Condition(ApiBaseModel):
+class WhereClauseCondition(ApiBaseModel):
     dataset: Optional[str] = None
     variable: Optional[str] = None
     comparator: Optional[Union[str, "Comparator"]] = None
