@@ -14,6 +14,11 @@ class ExtensibleTerminologyTerm(ApiBaseModel):
 class AnalysisReason(ExtensibleTerminologyTerm):
 
     controlledTerm: Union[str, AnalysisReasonEnum] = None
+
+class AnalysisPurpose(ExtensibleTerminologyTerm):
+
+    controlledTerm: Union[str, AnalysisPurposeEnum] = None
+    sponsorTermId: Optional[str] = None
     sponsorTermId: Optional[str] = None
 
 class SponsorAnalysisReason(ExtensibleTerminologyTerm):
@@ -21,7 +26,27 @@ class SponsorAnalysisReason(ExtensibleTerminologyTerm):
     controlledTerm: Optional[str] = None
     sponsorTermId: Optional[str] = None
 
-class AnalysisPurpose(ExtensibleTerminologyTerm):
+class SponsorAnalysisPurpose(ExtensibleTerminologyTerm):
 
-    controlledTerm: Union[str, AnalysisPurposeEnum] = None
+    controlledTerm: Optional[str] = None
+    sponsorTermId: Optional[str] = None
+
+class OperationRole(ExtensibleTerminologyTerm):
+
+    controlledTerm: Optional[str] = None
+    sponsorTermId: Optional[str] = None
+
+class SponsorOperationRole(ExtensibleTerminologyTerm):
+
+    controlledTerm: Optional[str] = None
+    sponsorTermId: Optional[str] = None
+
+class OutputFileType(ExtensibleTerminologyTerm):
+
+    controlledTerm: Optional[str] = None
+    sponsorTermId: Optional[str] = None
+
+class SponsorOutputFileType(ExtensibleTerminologyTerm):
+
+    controlledTerm: Optional[str] = None
     sponsorTermId: Optional[str] = None

@@ -7,47 +7,39 @@ app = FastAPI(
     )
 
 ars_router = APIRouter(prefix="/mdr/ars")
-database = "./workfiles/examples/Hackathon/Common Safety Displays.json"
+hackathon_data = "./workfiles/examples/Hackathon/Common Safety Displays.json"
+phuse_data = "./workfiles/examples/PHUSE Connect Workshop/PHUSE Connect Examples.json"
+database = []
+with open(hackathon_data) as f:
+    database.append(json.load(f))
+with open(phuse_data) as f:
+    database.append(json.load(f))
+
 
 @ars_router.get("/packages/")
 def get_all_ars_packages():
-    data = None
-    with open(database) as f:
-        data = json.load(f)
-    return [data]
+    return database
     
 
 @ars_router.get("/packages/{package_id}/reportingevents/")
 def get_all_package_reporting_events(package_id):
-    data = None
-    with open(database) as f:
-        data = json.load(f)
-    return data
+    return database[int(package_id)]
     
 
 @ars_router.get("/reportingevents/{reportingevent_id}/")
 def get_reporting_event(reportingevent_id):
-    data = None
-    with open(database) as f:
-        data = json.load(f)
-    return data
+    return database[int(reportingevent_id)]
     
 
 @ars_router.get("/reportingevents/{reportingevent_id}/methods/")
 def get_all_reportingevents_methods(reportingevent_id):
-    data = None
-    with open(database) as f:
-        data = json.load(f).get("methods")
-    return data
+    return database[int(reportingevent_id)].get("methods")
     
 
 @ars_router.get("/methods/{method_id}/")
 def get_method(method_id):
-    data = None
-    with open(database) as f:
-        data = json.load(f).get("methods")[int(method_id)]
-    return data
-    
+    return database[0].get("methods")[int(method_id)]
+
 
 @ars_router.get("/methods/{method_id}/operations/")
 def get_all_methods_operations(method_id):

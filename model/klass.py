@@ -4,7 +4,6 @@ from model.analysis_method import *
 from model.analysis_set import *
 from model.data_subset import *
 from model.display_section import *
-from model.method import *
 from model.nested_list import *
 from model.output import *
 from model.reporting_event import *
