@@ -1,7 +1,7 @@
 from typing import List, Union, Optional
 from uuid import UUID
 
-from analysis_output_programming_code import AnalysisOutputProgrammingCode
+from .analysis_output_programming_code import AnalysisOutputProgrammingCode
 from .base_api_model import ApiBaseModel
 from .document_reference import DocumentReference
 from .extensible_terminology_term import ExtensibleTerminologyTerm

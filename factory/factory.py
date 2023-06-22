@@ -16,10 +16,3 @@ def reporting_event_data():
     re = model.ReportingEvent.recursive_read(raw_json, 0)
     # print(re)
 
-def method_data():
-    raw_json = get_raw_data()
-    return model.Method.recursive_read(raw_json, 0)
-
-def method_data():
-    raw_json = get_raw_data()
-    return model.Method.recursive_read(raw_json, 0)

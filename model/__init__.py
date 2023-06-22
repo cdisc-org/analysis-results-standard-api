@@ -44,7 +44,7 @@ from model.subject_grouping_factor import SubjectGroupingFactor
 from model.template_code_parameter import TemplateCodeParameter
 from model.terminology_extension import TerminologyExtension
 from model.where_clause import WhereClause
-from model.where_clause_compound_expression import WhereClauseCompoundExpression
+from model.where_clause import WhereClauseCompoundExpression
 from model.where_clause_condition import WhereClauseCondition
 
 # Update forward refs

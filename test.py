@@ -1,4 +1,4 @@
-from factory.factory import reporting_event_data, method_data
+from factory.factory import reporting_event_data
 
 
 if __name__ == "__main__":

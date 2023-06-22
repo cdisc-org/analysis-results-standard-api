@@ -2,7 +2,7 @@ from typing import Optional, Union
 from uuid import UUID
 
 from .base_api_model import ApiBaseModel
-from referenced_operation_relationship import ReferencedOperationRelationship
+from .referenced_operation_relationship import ReferencedOperationRelationship
 
 
 class Operation(ApiBaseModel):
