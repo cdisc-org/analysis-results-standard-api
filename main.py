@@ -10,9 +10,9 @@ ars_router = APIRouter(prefix="/mdr/ars")
 hackathon_data = "./workfiles/examples/Hackathon/Common Safety Displays.json"
 phuse_data = "./workfiles/examples/PHUSE Connect Workshop/PHUSE Connect Examples.json"
 database = []
-with open(hackathon_data) as f:
+with open(hackathon_data, encoding="utf8") as f:
     database.append(json.load(f))
-with open(phuse_data) as f:
+with open(phuse_data, encoding="utf8") as f:
     database.append(json.load(f))
 
 
