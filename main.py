@@ -1,10 +1,13 @@
-from fastapi import FastAPI, APIRouter
+from fastapi import Depends, FastAPI, APIRouter, HTTPException, Header
+from typing import Annotated
 import uvicorn
 import json
 
 app = FastAPI(
         title="ARS API",
     )
+
+SECRET_KEY = "bbc3dcf9-9af6-4adf-8a1f-14635e9424b2"
 
 ars_router = APIRouter(prefix="/mdr/ars")
 hackathon_data = "./workfiles/examples/Hackathon/Common Safety Displays.json"
@@ -14,6 +17,10 @@ with open(hackathon_data, encoding="utf8") as f:
     database.append(json.load(f))
 with open(phuse_data, encoding="utf8") as f:
     database.append(json.load(f))
+
+async def get_token_header(x_token: Annotated[str, Header()]):
+    if x_token != SECRET_KEY:
+        raise HTTPException(status_code=400, detail="X-Token header invalid")
 
 
 @ars_router.get("/reportingevents/")
@@ -241,7 +248,7 @@ def get_reporting_event(reportingevent_id):
 #     return data
 
 
-app.include_router(ars_router)
+app.include_router(ars_router, dependencies=[Depends(get_token_header)])
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)
