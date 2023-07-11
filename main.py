@@ -11,11 +11,11 @@ SECRET_KEY = "bbc3dcf9-9af6-4adf-8a1f-14635e9424b2"
 
 ars_router = APIRouter(prefix="/mdr/ars")
 hackathon_data = "./workfiles/examples/Hackathon/Common Safety Displays.json"
-phuse_data = "./workfiles/examples/PHUSE Connect Workshop/PHUSE Connect Examples.json"
+fda_data = "./workfiles/examples/Hackathon/FDA STF.json"
 database = []
 with open(hackathon_data, encoding="utf8") as f:
     database.append(json.load(f))
-with open(phuse_data, encoding="utf8") as f:
+with open(fda_data, encoding="utf8") as f:
     database.append(json.load(f))
 
 async def get_token_header(x_token: Annotated[str, Header()]):
